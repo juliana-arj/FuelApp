@@ -1,0 +1,89 @@
+$primary-red: #F35F5F;
+$text-dark: #2D2D32; 
+$background-light: #f7f7f7; 
+$border-light: #DADDE0;
+$unit-gray: #666; 
+
+.icon-img {
+  width: 30px;
+  height: auto;
+}
+
+
+.page-title-container {
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  gap: 8px; 
+  margin: 30px 0 35px 0; 
+}
+
+.page-title-container ion-icon {
+  font-size: 55px; 
+  color: $primary-red; 
+}
+
+.page-title {
+  font-size: 25px;
+  font-weight: 550;
+  color: $text-dark;
+  margin: 0; 
+}
+
+.vehicle-item-card {
+  background: #ffffff; 
+  border-radius: 12px; 
+  border: 1px solid $border-light; 
+  
+  margin: 10px 20px; 
+  padding: 15px;
+  cursor: pointer;
+  transition: border-color 0.3s;
+}
+
+.vehicle-details {
+  display: flex;
+  flex-direction: column; 
+  width: 100%;
+}
+
+.vehicle-name {
+  font-size: 20px;
+  font-weight: 500;
+  color: $text-dark;
+  margin-bottom: 10px; 
+}
+
+.consumption-info {
+  display: flex;
+  align-items: flex-end; 
+}
+
+.consumption-value {
+  font-size: 20px;
+  font-weight: 700;
+  color: $text-dark;
+  margin: 0;
+  line-height: 1.1; 
+}
+
+.consumption-unit {
+  font-size: 14px;
+  font-weight: 500;
+  color: $unit-gray; 
+  padding-left: 4px; 
+  line-height: 1.1;
+  align-self: flex-end; 
+}
+
+
+.calc-btn {
+  --background: #F35F5F;
+  --border-radius: 7px;
+  font-weight: 600;
+  margin-top: 45px;
+  height: 40px;
+  width: 87%;      
+  margin-left: auto; 
+  margin-right: auto;
+}

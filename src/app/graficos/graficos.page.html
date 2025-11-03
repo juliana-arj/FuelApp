@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button>
+        <img src="assets/imagens/logo2.png" alt="Logo" class="icon-img">
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<br><br>
+<ion-content class="ion-padding">
+
+  <div class="page-title-container">
+    <ion-icon name="bar-chart-outline"></ion-icon>
+    <h1 class="page-title">Gráficos</h1>
+  </div>
+
+  <ion-card class="chart-card">
+    <ion-card-header>
+      <ion-card-title>Evolução do consumo</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <canvas #lineCanvas></canvas>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="chart-card">
+    <ion-card-header>
+      <ion-card-title>Comparativo de combustível</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <canvas #barCanvas></canvas>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

@@ -1,27 +1,122 @@
-#container {
-  text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+ion-content {
+  --background: #ffffff;
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+.logo-container {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0 30px 0;
 }
 
-#container p {
+.logo {
+  width: 500px;
+  max-width: 95%;
+}
+
+.menu-box {
+  background: #fff;
+  border-radius: 16px;
+  padding: 30px 20px;
+  margin: 0 auto;
+  width: 300px;
+  height: 280px; 
+  border: 2px solid #DADDE0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  gap: 20px;
+}
+
+.menu-btn {
+  width: 100%;
+  height: 50px;
+  --border-radius: 10px;
+  --border-color: #DADDE0;
+  --color: #333;
+  --background: #fff;
   font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+  font-weight: 500;
+  
+  padding: 0;
 }
 
-#container a {
-  text-decoration: none;
+.btn-content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding-left: 1px; 
+  gap: 12px;
+  text-align: left;
+}
+
+.btn-content ion-icon {
+  font-size: 25px;  
+  color: #848B92; 
+}
+
+/* home.page.scss (ADICIONE NO FINAL DO ARQUIVO) */
+
+/* 1. Estilo para o Overlay (Fundo Escurecido) */
+.custom-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: none; /* Oculto por padrão */
+    justify-content: center;
+    align-items: center;
+    z-index: 10000; /* Garante que fique acima de tudo */
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* 2. Estilo para o conteúdo visível do modal */
+.custom-modal-content {
+    background: var(--ion-card-background, #ffffff); /* Usa a variável de fundo de card */
+    width: 90%;
+    max-width: 500px;
+    height: 80%;
+    max-height: 550px;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    
+    /* Posição inicial (fora da tela) */
+    transform: translateY(100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* 3. Classe para abrir (Toggled via JavaScript) */
+.custom-modal-overlay.is-open {
+    display: flex; /* Torna o overlay visível */
+    opacity: 1;
+}
+
+.custom-modal-overlay.is-open .custom-modal-content {
+    transform: translateY(0); /* Move o modal para a posição central */
+}
+
+/* Estilos internos para o conteúdo */
+.modal-content-padding {
+    --padding-start: 16px;
+    --padding-end: 16px;
+    --padding-top: 20px;
+}
+
+.app-logo {
+    max-width: 150px;
+    margin: 0 auto 20px auto;
+}
+
+.app-version-text {
+    margin-top: 30px;
+    font-size: 12px;
+}
+
+.icon-red {
+    color: #F35F5F; /* Aplica o tom de vermelho desejado diretamente */
 }

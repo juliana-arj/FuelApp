@@ -1,0 +1,98 @@
+$primary-red: #ff6b61;
+$text-dark: #333; 
+$background-light: #f7f7f7; 
+$border-light: #DADDE0;
+
+
+ion-content {
+  --background: $background-light; 
+}
+
+.icon-img {
+  width: 30px;
+  height: auto;
+}
+
+.page-title-container {
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  gap: 8px; 
+  margin: 30px 0 35px 0; 
+}
+
+.page-title-container ion-icon {
+  font-size: 55px; 
+  color: $primary-red; 
+}
+
+.page-title {
+  font-size: 25px;
+  font-weight: 550;
+  color: $text-dark;
+  margin: 0; 
+}
+
+
+.historico-item-card {
+  background: #ffffff; 
+  border-radius: 12px; 
+  border: 1px solid $border-light; 
+ 
+  
+  margin: 10px 20px; 
+  padding: 15px;
+}
+
+.item-details {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+
+.fuel-date-row {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  margin-bottom: 10px; 
+  width: 100%;
+}
+
+.fuel-type {
+  font-size: 18px;
+  font-weight: 600;
+  color: $text-dark;
+}
+
+.fuel-date {
+  font-size: 14px;
+  color: #666; 
+  font-weight: 400;
+}
+
+.consumption-row {
+  display: flex;
+  justify-content: flex-end; 
+  width: 100%;
+}
+
+.consumption-value {
+  font-size: 22px;
+  font-weight: 700;
+  color: $text-dark;
+  margin: 0;
+}
+
+.consumption-value .unit {
+  font-size: 14px;
+  font-weight: 500;
+  color: $text-dark;
+}
+
+.calc-btn {
+  --background: #FF6363;
+  --border-radius: 8px;
+  font-weight: 600;
+  margin-top: 45px;
+}

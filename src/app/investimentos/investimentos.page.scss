@@ -1,0 +1,59 @@
+$fuel-app-red: #f36c5d; 
+
+ion-toolbar {
+    --background: #ffffff; 
+}
+
+ion-content {
+  --background: #ffffff; 
+  text-align: center; 
+}
+
+.app-header-img-container {
+  display: flex;
+  justify-content: center; 
+}
+
+.app-header-img-container ion-img {
+    width: 500px; 
+    height: auto;
+    max-width: 95%; 
+    object-fit: contain;
+}
+
+.menu-grid {
+  padding: 0;
+  max-width: 600px; 
+  margin: 0 auto;
+}
+
+
+.menu-card {
+  --background: #ffffff;
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  border: 1px solid #DADDE0; 
+  box-shadow: none;      
+  
+  border-radius: 12px;
+  margin: 3px; 
+ 
+ion-icon {
+    font-size: 48px;
+    color: $fuel-app-red;
+    margin-bottom: 5px;
+}
+  
+p {
+    font-size: 17px;
+    font-weight: 500;
+    color: #F35F5F;
+    margin: 0;
+    text-align: center;
+    line-height: 1.3;
+ }
+}

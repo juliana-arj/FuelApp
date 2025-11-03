@@ -1,0 +1,66 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button>
+        <img src="assets/imagens/logo2.png" alt="Logo" class="icon-img">
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <div class="form-container">
+    <div class="form-header">
+      <ion-icon name="calculator-outline"></ion-icon>
+      <h2>Cálculo</h2>
+    </div>
+
+    <ion-label position="stacked">Data</ion-label>
+    <ion-item lines="none">
+      <ion-input type="date" style="color: rgb(126, 126, 126);" [(ngModel)]="dataAbastecimento"></ion-input>
+    </ion-item>
+
+    <ion-label position="stacked">Quilometragem Atual</ion-label>
+    <ion-item lines="none">
+      <ion-input type="number" placeholder="Ex: 10000" [(ngModel)]="quilometragemAtual"></ion-input>
+    </ion-item>
+
+    <ion-label position="stacked">Litros Abastecidos</ion-label>
+    <ion-item lines="none">
+      <ion-input type="number" placeholder="Ex: 45" [(ngModel)]="litrosAbastecidos"></ion-input>
+    </ion-item>
+
+    <ion-label position="stacked">Valor pago</ion-label>
+    <ion-item lines="none">
+      <ion-input type="number" placeholder="R$" [(ngModel)]="valorPago"></ion-input>
+    </ion-item>
+
+    <ion-label position="stacked">Combustível</ion-label>
+    <ion-item lines="none">
+      <ion-select placeholder="Selecione" [(ngModel)]="tipoCombustivel">
+        <ion-select-option value="gasolina">Gasolina</ion-select-option>
+        <ion-select-option value="etanol">Etanol</ion-select-option>
+        <ion-select-option value="diesel">Diesel</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-button expand="block" class="calc-btn" (click)="calcularConsumo()"
+      [disabled]="isCalculoDisabled">Calcular</ion-button>
+  </div>
+
+  <div class="resultado-card" *ngIf="calculoRealizado">
+    <p class="titulo">Consumo Médio</p>
+    <h2 class="valor">{{ consumoMedio }} km/l</h2>
+
+
+    <p class="titulo">Custo por km</p>
+    <h2 class="valor">R$ {{ custoPorKm }}</h2>
+
+    <ion-button expand="block" class="save-btn" (click)="salvarAbastecimento()">Salvar</ion-button>
+  </div>
+
+</ion-content>

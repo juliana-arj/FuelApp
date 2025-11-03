@@ -1,0 +1,49 @@
+
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button  defaultHref="/"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+
+<ion-content class="ion-padding-horizontal">
+  
+ <div class="app-header-img-container">
+    <ion-img src="assets/imagens/logo.png" alt="Fuel App Logo"></ion-img>
+  </div>
+
+  <ion-grid class="menu-grid">
+    <ion-row class="ion-justify-content-center">
+      
+      <ion-col size="6" size-md="4" size-lg="3">
+        <ion-card class="menu-card" routerLink="/calculo">
+          <ion-icon name="calculator-outline"></ion-icon>
+          <p>Novo<br>Abastecimento</p>
+        </ion-card>
+      </ion-col>
+
+      <ion-col size="6" size-md="4" size-lg="3">
+        <ion-card class="menu-card" routerLink="/historico">
+          <ion-icon name="document-text-outline"></ion-icon>
+          <p>Histórico</p>
+        </ion-card>
+      </ion-col>
+
+      <ion-col size="6" size-md="4" size-lg="3">
+        <ion-card class="menu-card" routerLink="/graficos">
+          <ion-icon name="bar-chart-outline"></ion-icon>
+          <p>Gráficos</p>
+        </ion-card>
+      </ion-col>
+
+      <ion-col size="6" size-md="4" size-lg="3">
+        <ion-card class="menu-card" routerLink="/veiculos">
+          <ion-icon name="car-outline"></ion-icon>
+          <p>Carros</p>
+        </ion-card>
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

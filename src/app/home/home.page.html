@@ -1,20 +1,100 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content class="ion-padding">
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="logo-container">
+    <ion-img src="assets\imagens\logo.png" class="logo"></ion-img>
+  </div>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <div class="menu-box">
+    <ion-button expand="block" fill="outline" class="menu-btn" routerLink="/investimentos">
+      <div class="btn-content">
+        <ion-icon name="home-outline"></ion-icon>
+        <span>Home</span>
+      </div>
+    </ion-button>
+
+    <ion-button expand="block" fill="outline" class="menu-btn" (click)="openAboutModal()">
+      <div class="btn-content">
+        <ion-icon name="information-circle-outline"></ion-icon>
+        <span>Sobre</span>
+      </div>
+    </ion-button>
+
+    <ion-button expand="block" fill="outline" class="menu-btn" routerLink="/integrantes">
+      <div class="btn-content">
+        <ion-icon name="people-outline"></ion-icon>
+        <span>Integrantes</span>
+      </div>
+    </ion-button>
+  </div>
+  <div id="about-app-modal" class="custom-modal-overlay">
+    <div class="custom-modal-content">
+
+      <ion-header>
+        <ion-toolbar style="--background: #F35F5F;">
+          <ion-title style="color: white;">Sobre o App</ion-title>
+          <ion-buttons slot="end">
+            <ion-button onclick="document.getElementById('about-app-modal').classList.remove('is-open')"
+              style="color: #ffffff;">
+              <ion-icon name="close-outline"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+
+      <ion-content class="modal-content-padding">
+        <div class="modal-content-inner">
+          <ion-img src="assets/imagens/logo.png" class="app-logo"></ion-img>
+
+          <h2 class="ion-text-center">Fuel App: Seu Consumo Inteligente</h2>
+          <p class="ion-text-center">
+            Bem-vindo ao Fuel App, a ferramenta essencial para gerenciar o consumo de combustível e os gastos do seu
+            veículo.
+          </p>
+
+          <ion-list lines="full">
+
+            <ion-item>
+              <ion-icon name="calculator-outline" slot="start" class="icon-red"></ion-icon>
+              <ion-label>
+                <h3>Cálculo / Novo Abastecimento</h3>
+                <p>Registre a quilometragem, litros e valor pago para calcular o consumo médio (Km/l) do seu último
+                  trajeto.</p>
+              </ion-label>
+            </ion-item>
+
+            <ion-item>
+              <ion-icon name="document-text-outline" slot="start" class="icon-red"></ion-icon>
+              <ion-label>
+                <h3>Histórico</h3>
+                <p>Mantenha um registro organizado de todos os seus abastecimentos, incluindo consumo e custo por
+                  quilômetro.</p>
+              </ion-label>
+            </ion-item>
+
+            <ion-item>
+              <ion-icon name="car-outline" slot="start" class="icon-red"></ion-icon>
+              <ion-label>
+                <h3>Veículos</h3>
+                <p>Gerencie múltiplos veículos e defina qual está ativo para o registro de novos abastecimentos.</p>
+              </ion-label>
+            </ion-item>
+
+            <ion-item>
+              <ion-icon name="bar-chart-outline" slot="start" class="icon-red"></ion-icon>
+              <ion-label>
+                <h3>Gráficos</h3>
+                <p>Visualize a evolução do consumo e faça comparativos entre diferentes tipos de combustível ao longo do
+                  tempo.</p>
+              </ion-label>
+            </ion-item>
+
+          </ion-list>
+
+          <ion-text color="medium">
+            <p class="ion-text-center app-version-text">Versão 1.0 - Projeto Ionic.</p>
+          </ion-text>
+        </div>
+      </ion-content>
+    </div>
   </div>
 </ion-content>

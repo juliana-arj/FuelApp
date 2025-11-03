@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button>
+        <img src="assets/imagens/logo2.png" alt="Logo" class="icon-img">
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <div class="page-title-container">
+    <ion-icon name="document-text-outline"></ion-icon>
+    <h1 class="page-title">Histórico</h1>
+  </div>
+
+  <ion-item *ngIf="historicoCarregado && historico.length === 0" lines="none">
+    <ion-label class="ion-text-center">
+      <h2>Histórico vazio.</h2>
+      <p>Faça um novo abastecimento na página de Cálculo.</p>
+    </ion-label>
+  </ion-item>
+
+  <div class="historico-item-card" *ngFor="let item of historico">
+    <div class="item-details">
+      <div class="fuel-date-row">
+        <span class="fuel-type">{{ item.combustivel | titlecase }}</span>
+        <span class="fuel-date">{{ item.data }}</span>
+      </div>
+
+      <div class="consumption-row">
+        <h2 class="consumption-value">{{ item.consumoMedio.toFixed(2).replace('.', ',') }}<span class="unit">
+            km/l</span>
+        </h2>
+      </div>
+
+      <ion-label>
+        <p>KM: {{ item.quilometragem }} | Litros: {{ item.litros }}</p>
+        <p *ngIf="item.valor !== null && item.custoPorKm !== null">
+          R$ {{ item.valor.toFixed(2).replace('.', ',') }} (R$ {{ item.custoPorKm.toFixed(2).replace('.', ',') }}/km)
+        </p>
+      </ion-label>
+    </div>
+
+    <ion-button expand="block" class="calc-btn" (click)="confirmarExclusao(item.id)" style="margin-top: 15px;">
+      <ion-icon slot="start" name="trash-outline"></ion-icon>
+      Excluir Registro
+    </ion-button>
+  </div>
+
+</ion-content>

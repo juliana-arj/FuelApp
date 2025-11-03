@@ -1,0 +1,96 @@
+ion-content {
+  --background: #ffffff;
+}
+
+.icon-img {
+  width: 30px;
+  height: auto;
+}
+
+.form-container {
+  background: #fff;
+
+  padding: 22px;
+  margin: 20px;
+}
+
+.form-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #ff6b61;
+  margin-bottom: 35px;
+}
+
+.form-header ion-icon {
+  font-size: 55px;
+  color: #ff6b61;
+}
+
+.form-header h2 {
+  font-size: 25px;
+  font-weight: 550;
+  color: #2D2D32;
+  margin: 0;
+}
+
+ion-item {
+  --background: #fff;
+  --border-color: #dadde0;
+  --border-radius: 10px;
+  --inner-border-width: 0;
+  border: 1px solid #dadde0;
+  border-radius: 10px;
+  margin-bottom: 14px;
+}
+
+ion-label {
+  font-size: 14px;
+  color: #444;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+ion-input, ion-select {
+  font-size: 14px;
+  padding-left: 8px;
+}
+
+.calc-btn {
+  --background: #FF6363;
+  --border-radius: 8px;
+  font-weight: 600;
+  margin-top: 45px;
+}
+
+.resultado-card {
+  border: 1.5px solid #FF6363;
+  background: #fff3f1;
+  border-radius: 14px;
+  margin: 20px;
+  padding: 20px;
+  text-align: left;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.05);
+}
+
+.resultado-card .titulo {
+  font-size: 17px;
+  color: #0B0B0D;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+.resultado-card .valor {
+  font-size: 20px;
+  font-weight: bold;
+  color: #FF6363;
+  margin-bottom: 12px;
+}
+
+.save-btn {
+  --background: #FF6363;
+  --border-radius: 10px;
+  font-weight: 600;
+  margin-top: 10px;
+}
